@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDlJQzmvAoyoQXfSvSrtCyx9egwXgGnrbs",
+  apiKey: "AIzaSyDlSH7xGsc4XIzbGZyUOKqHlOfrdamBh_M",
   authDomain: "skillquest-ai-prod.firebaseapp.com",
   projectId: "skillquest-ai-prod",
   storageBucket: "skillquest-ai-prod.firebasestorage.app",
