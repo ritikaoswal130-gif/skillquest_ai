@@ -21,11 +21,11 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
       if (docSnap.exists()) {
         const data = docSnap.data();
         
-        // � Check if skills changed, if so regenerate recommendations
+        // Check if skills changed, if so regenerate recommendations
         const skillsChanged = JSON.stringify(profileData?.skills) !== JSON.stringify(data.skills);
         const interestsChanged = JSON.stringify(profileData?.interests) !== JSON.stringify(data.interests);
         
-        // 🔥 Update streak logic
+        // Update streak logic
         const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
         const lastVisitDate = data.lastVisitDate || today;
         let streak = data.streak || 1;
@@ -55,18 +55,18 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
         // Update local state with new streak
         const updatedData = { ...data, streak, lastVisitDate: today };
         setProfileData(updatedData);
-        console.log("📊 Profile data with streak:", updatedData);
+        console.log("Profile data with streak:", updatedData);
 
-        // 🔄 Regenerate recommendations if skills or interests changed
+        // Regenerate recommendations if skills or interests changed
         if (skillsChanged || interestsChanged) {
-          console.log("✨ Skills/Interests changed! Regenerating recommendations...");
+          console.log("Skills/Interests changed! Regenerating recommendations...");
           const recs = getRecommendations(updatedData.skills || []);
           setRecommendations(recs);
-          console.log("✅ New recommendations generated:", recs);
+          console.log("New recommendations generated:", recs);
         } else {
-          // 🔥 Generate local recommendations
+          // Generate local recommendations
           const recs = getRecommendations(updatedData.skills || []);
-          console.log("✅ Recommendations generated:", recs);
+          console.log("Recommendations generated:", recs);
           setRecommendations(recs);
         }
       }
@@ -132,7 +132,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
               whiteSpace: "nowrap"
             }}
           >
-            {sidebarOpen ? "📊 Dashboard" : "📊"}
+            {sidebarOpen ? "Dashboard" : "D"}
           </button>
 
           <button
@@ -153,7 +153,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
               whiteSpace: "nowrap"
             }}
           >
-            {sidebarOpen ? "👤 Profile" : "👤"}
+            {sidebarOpen ? "Profile" : "P"}
           </button>
 
           <button
@@ -175,7 +175,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
               marginTop: "auto"
             }}
           >
-            {sidebarOpen ? "🚪 Logout" : "🚪"}
+            {sidebarOpen ? "Logout" : "L"}
           </button>
 
           {/* Learning Resources Section */}
@@ -194,7 +194,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                 marginBottom: "12px",
                 opacity: 0.7
               }}>
-                📚 Learning Resources
+                Learning Resources
               </h4>
               {recommendations?.skills && recommendations.skills.length > 0 ? (
                 <div>
@@ -244,7 +244,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                         textTransform: "uppercase",
                         letterSpacing: "0.5px"
                       }}>
-                        ⭐ Top Resources (4+):
+                        Top Resources (4+):
                       </p>
                       <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
                         {skillsData[expandedSkill].resources.slice(0, 5).map((resource, i) => (
@@ -303,43 +303,9 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
 
       {/* Main Content */}
       <div style={{ flex: 1, padding: "40px 20px", overflowY: "auto", position: "relative", height: "100vh", maxHeight: "100vh" }}>
-        {/* Dark Mode Toggle - Small Icon in Corner */}
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          style={{
-            position: "fixed",
-            top: "20px",
-            right: "20px",
-            width: "44px",
-            height: "44px",
-            borderRadius: "50%",
-            background: "var(--card-bg)",
-            border: "2px solid var(--card-border)",
-            cursor: "pointer",
-            fontSize: "20px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            transition: "all 0.3s ease",
-            zIndex: 1000,
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)"
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = "scale(1.1)";
-            e.currentTarget.style.boxShadow = "0 6px 16px rgba(168, 142, 130, 0.3)";
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)";
-          }}
-          title={darkMode ? "Light Mode" : "Dark Mode"}
-        >
-          {darkMode ? "☀️" : "🌙"}
-        </button>
-
         {/* Header */}
         <div style={{ marginBottom: "40px", animation: "fadeIn 0.5s ease-out", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-          <div>
+          <div style={{ flex: 1 }}>
             <h1 style={{
               fontSize: "36px",
               marginBottom: "8px",
@@ -348,12 +314,40 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}>
-              SkillQuest 🚀
+              SkillQuest
             </h1>
             <p style={{ opacity: 0.6, fontSize: "14px", color: "var(--text-secondary)" }}>
               {user.email}
             </p>
           </div>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            style={{
+              width: "44px",
+              height: "44px",
+              borderRadius: "50%",
+              background: "var(--card-bg)",
+              border: "2px solid var(--card-border)",
+              cursor: "pointer",
+              fontSize: "20px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              transition: "all 0.3s ease",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)"
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = "scale(1.1)";
+              e.currentTarget.style.boxShadow = "0 6px 16px rgba(168, 142, 130, 0.3)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)";
+            }}
+            title={darkMode ? "Light Mode" : "Dark Mode"}
+          >
+            {darkMode ? "☀" : "☽"}
+          </button>
         </div>
 
         {/* Dashboard Tab */}
@@ -361,30 +355,29 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
           <div style={{ animation: "fadeIn 0.5s ease-out" }}>
             <div className="card">
               <div>
-                <h2>Welcome back 👋</h2>
+                <h2>Welcome back</h2>
                 <p style={{ marginBottom: "15px", opacity: 0.9 }}>Ready to level up your skills?</p>
               </div>
 
               <p style={{ fontSize: "13px", opacity: 0.75, marginBottom: "25px", fontStyle: "italic", color: "var(--accent)" }}>
-                🔮 Smart recommendations based on your skills
+                Smart recommendations based on your skills
               </p>
 
               <div className="card-grid">
                 <div className="mini-card" style={{
                   cursor: "pointer",
-                  transition: "all 0.3s ease",
-                  transformOrigin: "center"
+                  transition: "all 0.3s ease"
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
+                  e.currentTarget.style.transform = "translateY(-4px)";
                   e.currentTarget.style.boxShadow = "0 12px 30px rgba(168, 142, 130, 0.2)";
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.05)";
                 }}>
                   <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "32px", marginBottom: "10px", animation: "float 3s ease-in-out infinite" }}>📈</div>
+                    <div style={{ fontSize: "32px", marginBottom: "10px" }}>▲</div>
                     <div style={{ fontWeight: "600", marginBottom: "8px" }}>Skill Suggestions</div>
                     {recommendations ? (
                       <div style={{ marginTop: "10px", fontSize: "12px" }}>
@@ -405,15 +398,15 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                   transition: "all 0.3s ease"
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
+                  e.currentTarget.style.transform = "translateY(-4px)";
                   e.currentTarget.style.boxShadow = "0 12px 30px rgba(168, 142, 130, 0.2)";
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.05)";
                 }}>
                   <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "32px", marginBottom: "10px", animation: "float 3s ease-in-out infinite 0.3s" }}>💡</div>
+                    <div style={{ fontSize: "32px", marginBottom: "10px" }}>◆</div>
                     <div style={{ fontWeight: "600", marginBottom: "8px" }}>Project Ideas</div>
                     {recommendations ? (
                       <div style={{ marginTop: "10px", fontSize: "12px" }}>
@@ -434,15 +427,15 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                   transition: "all 0.3s ease"
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
+                  e.currentTarget.style.transform = "translateY(-4px)";
                   e.currentTarget.style.boxShadow = "0 12px 30px rgba(168, 142, 130, 0.2)";
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.05)";
                 }}>
                   <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "32px", marginBottom: "10px", animation: "float 3s ease-in-out infinite 0.6s" }}>🎯</div>
+                    <div style={{ fontSize: "32px", marginBottom: "10px" }}>◈</div>
                     <div style={{ fontWeight: "600", marginBottom: "8px" }}>Career Paths</div>
                     {recommendations ? (
                       <div style={{ marginTop: "10px", fontSize: "12px" }}>
@@ -463,15 +456,15 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                   transition: "all 0.3s ease"
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
+                  e.currentTarget.style.transform = "translateY(-4px)";
                   e.currentTarget.style.boxShadow = "0 12px 30px rgba(168, 142, 130, 0.2)";
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.05)";
                 }}>
                   <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "32px", marginBottom: "10px", animation: "pulse 2s ease-in-out infinite" }}>⚡</div>
+                    <div style={{ fontSize: "32px", marginBottom: "10px", fontWeight: "700" }}>●</div>
                     <div style={{ fontWeight: "600", marginBottom: "8px" }}>Streak</div>
                     {profileData ? (
                       <div style={{ marginTop: "10px", fontSize: "12px" }}>
@@ -479,7 +472,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                           {profileData.streak || 0}
                         </div>
                         <div style={{ fontSize: "10px", opacity: 0.7 }}>
-                          {profileData.streak > 1 ? "Keep it going! 🔥" : "Start learning daily!"}
+                          {profileData.streak > 1 ? "Keep it going!" : "Start learning daily!"}
                         </div>
                       </div>
                     ) : (
@@ -499,7 +492,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                   border: "1px solid rgba(200, 180, 160, 0.2)"
                 }}>
                   <h3 style={{ fontSize: "14px", fontWeight: "600", marginBottom: "12px", color: "#a88e82" }}>
-                    📚 Resources for {expandedSkill}
+                    Resources for {expandedSkill}
                   </h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                     {skillsData[expandedSkill].resources.map((resource, i) => (
@@ -530,7 +523,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                           e.target.style.color = "#a88e82";
                         }}
                       >
-                        🔗 {resource.name}
+                        {resource.name}
                       </a>
                     ))}
                   </div>
@@ -555,9 +548,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                     <div
                       key={i}
                       style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "8px",
+                        display: "inline-block",
                         padding: "8px 12px",
                         background: "linear-gradient(135deg, #c4b5a8, #a88e82)",
                         color: "white",
@@ -565,25 +556,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                         fontSize: "12px"
                       }}
                     >
-                      <span>{s}</span>
-                      <select
-                        value={proficiencyLevels[s] || "Intermediate"}
-                        onChange={(e) => setProficiencyLevels({ ...proficiencyLevels, [s]: e.target.value })}
-                        style={{
-                          padding: "4px 6px",
-                          borderRadius: "4px",
-                          border: "1px solid rgba(255,255,255,0.3)",
-                          background: "rgba(255,255,255,0.2)",
-                          color: "white",
-                          fontSize: "11px",
-                          cursor: "pointer"
-                        }}
-                      >
-                        <option value="Beginner">🔰 Beginner</option>
-                        <option value="Intermediate">📚 Intermediate</option>
-                        <option value="Advanced">⭐ Advanced</option>
-                        <option value="Expert">🏆 Expert</option>
-                      </select>
+                      {s}
                     </div>
                   ))}
                 </div>
@@ -615,7 +588,7 @@ export default function Dashboard({ user, onEditProfile, darkMode, setDarkMode }
                   width: "100%"
                 }}
               >
-                Edit Profile ✏️
+                Edit Profile
               </button>
             </div>
           </div>

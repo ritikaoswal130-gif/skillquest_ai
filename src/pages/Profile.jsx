@@ -9,7 +9,7 @@ export default function Profile({ user, onProfileCreated }) {
   const [fetching, setFetching] = useState(true);
   const [error, setError] = useState("");
 
-  // 🔥 Fetch existing data (PRE-FILL)
+  // Fetch existing data (PRE-FILL)
   useEffect(() => {
     const fetchProfile = async () => {
       try {
@@ -33,7 +33,7 @@ export default function Profile({ user, onProfileCreated }) {
     fetchProfile();
   }, [user]);
 
-  // 🔥 Save profile
+  // Save profile
   const handleSave = async (e) => {
     e.preventDefault();
     setError("");
@@ -65,7 +65,7 @@ export default function Profile({ user, onProfileCreated }) {
     setLoading(false);
   };
 
-  // ⏳ Loading state while fetching existing data
+  // Loading state while fetching existing data
   if (fetching) {
     return (
       <div className="auth-box">

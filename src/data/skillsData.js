@@ -1,18 +1,18 @@
-// 🧠 SkillQuest AI - Comprehensive Skill Mapping Dataset
+// SkillQuest AI - Comprehensive Skill Mapping Dataset
 // Maps skills → next skills, projects, and career paths
 
 export const skillsData = {
-  // 🐍 PYTHON ECOSYSTEM
+  // PYTHON ECOSYSTEM
   Python: {
     proficiencyLevels: ["Beginner", "Intermediate", "Advanced", "Expert"],
     nextSkills: ["Django", "FastAPI", "Machine Learning", "Data Science", "Pandas", "NumPy", "Flask", "Async Programming"],
     projects: [
-      "Build a web scraper for real-time data",
-      "Create a machine learning model for prediction",
-      "Develop a REST API with FastAPI",
-      "Build an automation tool for daily tasks",
-      "Create a chatbot using NLP",
-      "Develop a data analysis dashboard"
+      "Stock price tracker and analyzer with real-time alerts",
+      "Personal finance budgeting CLI tool with data visualization",
+      "YouTube video metadata scraper and analyzer",
+      "Weather-based outfit recommendation system",
+      "Social media sentiment analysis dashboard",
+      "Automated file organizer that sorts by type and date"
     ],
     careers: ["Backend Developer", "Data Scientist", "ML Engineer", "DevOps Engineer", "Automation Specialist", "Python Developer"],
     resources: [
@@ -27,12 +27,12 @@ export const skillsData = {
     proficiencyLevels: ["Beginner", "Intermediate", "Advanced", "Expert"],
     nextSkills: ["REST APIs", "PostgreSQL", "Docker", "Celery", "Redis", "DRF", "Authentication"],
     projects: [
-      "Build a content management system",
-      "Create a real-time notification system",
-      "Develop a multi-tenant SaaS platform",
-      "Build an e-commerce backend",
-      "Create a social network platform",
-      "Build an admin dashboard"
+      "Build a community discussion forum with voting system",
+      "Create a job board platform with application tracking",
+      "Develop a collaborative team project management app",
+      "Build a marketplace for freelance services",
+      "Create a recipe sharing platform with ratings",
+      "Build an event scheduling and ticketing system"
     ],
     careers: ["Backend Developer", "Full-Stack Developer", "DevOps Engineer", "Django Specialist", "Software Engineer"],
     resources: [
@@ -46,12 +46,12 @@ export const skillsData = {
   FastAPI: {
     nextSkills: ["Async Programming", "PostgreSQL", "GraphQL", "Testing", "Performance Optimization", "Docker", "Pydantic"],
     projects: [
-      "Build a high-performance REST API",
-      "Create a real-time API with WebSockets",
-      "Develop a microservice architecture",
-      "Build a machine learning model server",
-      "Create an async job queue system",
-      "Build a rate-limited API"
+      "Build a personal AI assistant REST API",
+      "Create a real-time document collaboration backend",
+      "Develop a cryptocurrency price tracker API",
+      "Build a smart home automation API",
+      "Create a content moderation system with AI",
+      "Build a multi-player game server backend"
     ],
     careers: ["Backend Developer", "API Developer", "Performance Engineer", "Microservices Architect", "Senior Developer"],
     resources: [
@@ -65,11 +65,11 @@ export const skillsData = {
   Flask: {
     nextSkills: ["SQLAlchemy", "Jinja2", "SQLite", "Testing", "Blueprint Architecture"],
     projects: [
-      "Build a simple blog platform",
+      "Build a personal expense tracker with charts",
       "Create a URL shortener service",
-      "Develop a notes application",
-      "Build a personal portfolio site",
-      "Create a simple authentication system"
+      "Build a movie review and recommendation app",
+      "Create a personal blog with markdown support",
+      "Build a habit tracking and analytics app"
     ],
     careers: ["Web Developer", "Backend Developer", "Junior Developer", "Freelancer"],
     resources: [
@@ -83,11 +83,12 @@ export const skillsData = {
   "Machine Learning": {
     nextSkills: ["TensorFlow", "PyTorch", "Scikit-learn", "Neural Networks", "NLP", "Computer Vision", "Data Analysis"],
     projects: [
-      "Build a recommendation system",
-      "Create an image classification model",
-      "Develop a sentiment analysis tool",
-      "Build a predictive analytics model",
-      "Create an anomaly detection system"
+      "Build a handwritten digit recognition system",
+      "Create a movie recommendation engine",
+      "Develop an email spam classifier",
+      "Build a customer churn prediction model",
+      "Create a plant disease detection system from images",
+      "Build a stock price prediction model"
     ],
     careers: ["ML Engineer", "Data Scientist", "AI Engineer", "Research Scientist"],
     resources: [
@@ -101,11 +102,11 @@ export const skillsData = {
   "Data Science": {
     nextSkills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "SQL", "Statistics", "Jupyter Notebooks"],
     projects: [
-      "Analyze large datasets and create visualizations",
-      "Build predictive models",
-      "Create data pipelines",
-      "Perform statistical analysis",
-      "Build interactive dashboards"
+      "Analyze global COVID-19 trends and visualizations",
+      "Create a housing market analysis dashboard",
+      "Build a customer behavior analytics report",
+      "Analyze GitHub trending repositories data",
+      "Build an election results prediction analysis"
     ],
     careers: ["Data Scientist", "Data Analyst", "Analytics Engineer", "Business Analyst"],
     resources: [
@@ -116,17 +117,16 @@ export const skillsData = {
     ]
   },
 
-  // 🌐 JAVASCRIPT ECOSYSTEM
   JavaScript: {
     proficiencyLevels: ["Beginner", "Intermediate", "Advanced", "Expert"],
     nextSkills: ["React", "Node.js", "TypeScript", "Vue.js", "CSS", "Web APIs", "Async/Await", "Express"],
     projects: [
-      "Build an interactive web dashboard",
-      "Create a real-time chat application",
-      "Develop a todo app with local storage",
-      "Build a weather app with live API",
-      "Create a game using Canvas API",
-      "Build a note-taking app"
+      "Build a Pomodoro timer with sound notifications",
+      "Create an interactive quiz game with scoring",
+      "Build a real-time currency converter",
+      "Create a visual music playlist player",
+      "Build a browser-based drawing or sketching app",
+      "Create a markdown note-taking app"
     ],
     careers: ["Web Developer", "Full-Stack Developer", "Frontend Developer", "JavaScript Developer"],
     resources: [
@@ -141,12 +141,12 @@ export const skillsData = {
     proficiencyLevels: ["Beginner", "Intermediate", "Advanced", "Expert"],
     nextSkills: ["Redux", "Next.js", "React Router", "Hooks", "TypeScript", "Testing", "State Management"],
     projects: [
-      "Build a social media dashboard",
-      "Create an e-commerce product page",
-      "Develop a project management tool",
-      "Build a real-time notifications app",
-      "Create a video streaming interface",
-      "Build a complex form application"
+      "Build a personal portfolio website with projects showcase",
+      "Create a meal delivery app UI with filtering",
+      "Develop a Spotify-like music player interface",
+      "Build a Netflix-style streaming interface",
+      "Create an Instagram clone frontend",
+      "Build a collaborative Trello-like kanban board"
     ],
     careers: ["Frontend Developer", "Full-Stack Developer", "React Developer", "Senior Developer"],
     resources: [
@@ -161,11 +161,11 @@ export const skillsData = {
     proficiencyLevels: ["Beginner", "Intermediate", "Advanced", "Expert"],
     nextSkills: ["Vuex", "Vue Router", "Nuxt.js", "Pinia", "TypeScript"],
     projects: [
-      "Build an admin dashboard",
-      "Create an interactive UI component library",
-      "Develop a real-time collaboration tool",
-      "Build a PWA application",
-      "Create a single-page application"
+      "Build an admin dashboard with charts and analytics",
+      "Create an e-learning platform interface",
+      "Develop a real-time collaborative whiteboard",
+      "Build a cryptocurrency portfolio tracker",
+      "Create a weather app with detailed forecasts"
     ],
     careers: ["Frontend Developer", "Vue Specialist", "Web Developer"],
     resources: [
@@ -179,11 +179,11 @@ export const skillsData = {
   Angular: {
     nextSkills: ["RxJS", "TypeScript", "Dependency Injection", "Testing", "Angular Material"],
     projects: [
-      "Build enterprise web applications",
-      "Create a large-scale SPA",
-      "Develop a real-time dashboard",
-      "Build a progressive web app",
-      "Create a component library"
+      "Build an enterprise project management system",
+      "Create a large-scale customer relationship manager",
+      "Develop a real-time stock trading dashboard",
+      "Build a healthcare patient management system",
+      "Create a data visualization analytics platform"
     ],
     careers: ["Frontend Developer", "Angular Developer", "Enterprise Developer"],
     resources: [
@@ -194,32 +194,14 @@ export const skillsData = {
     ]
   },
 
-  "Node.js": {
-    nextSkills: ["Express", "MongoDB", "PostgreSQL", "Async/Await", "REST APIs", "WebSockets"],
-    projects: [
-      "Build a REST API server",
-      "Create a real-time chat server",
-      "Develop a task scheduler",
-      "Build a file upload service",
-      "Create a notification system"
-    ],
-    careers: ["Backend Developer", "Full-Stack Developer", "Server-Side Developer", "API Developer"],
-    resources: [
-      { name: "Node.js Tutorial by Traversy Media (YouTube)", url: "https://www.youtube.com/watch?v=fBNz5xF-Kx4" },
-      { name: "Complete Node.js Course by Andrew Mead (Udemy)", url: "https://www.udemy.com/course/the-complete-nodejs-developer-course-2/" },
-      { name: "Node.js Official Documentation", url: "https://nodejs.org/docs/" },
-      { name: "freeCodeCamp Node.js Tutorial (YouTube)", url: "https://www.youtube.com/watch?v=RLtxwajqJ88" }
-    ]
-  },
-
   Express: {
     nextSkills: ["Middleware", "Authentication", "Database Integration", "Error Handling", "REST APIs"],
     projects: [
-      "Build a robust REST API",
-      "Create an authentication system",
-      "Develop a blog platform API",
-      "Build an e-commerce backend",
-      "Create a microservice"
+      "Build a secure authentication system with JWT",
+      "Create an event management API",
+      "Develop a file upload and processing service",
+      "Build an expense sharing platform API",
+      "Create a podcast distribution API"
     ],
     careers: ["Backend Developer", "Full-Stack Developer", "API Architect"],
     resources: [
@@ -234,11 +216,11 @@ export const skillsData = {
     proficiencyLevels: ["Beginner", "Intermediate", "Advanced", "Expert"],
     nextSkills: ["React", "Node.js", "NestJS", "GraphQL", "Testing", "Advanced OOP"],
     projects: [
-      "Build a type-safe API client",
-      "Create a full-stack TypeScript application",
-      "Develop a CLI tool with strict typing",
-      "Build a library with comprehensive types",
-      "Create a game engine"
+      "Build a strongly-typed CLI application",
+      "Create a full-stack TypeScript project management app",
+      "Develop a browser extension with TypeScript",
+      "Build a data validation library",
+      "Create a music streaming app with types"
     ],
     careers: ["Full-Stack Developer", "Senior Developer", "Tech Lead", "Software Architect"],
     resources: [
@@ -249,15 +231,15 @@ export const skillsData = {
     ]
   },
 
-  // 📱 MOBILE DEVELOPMENT
+  // MOBILE DEVELOPMENT
   "React Native": {
     nextSkills: ["Expo", "Redux", "Firebase", "Navigation", "Native Modules"],
     projects: [
-      "Build a social media app",
-      "Create a fitness tracking app",
-      "Develop a note-taking app",
-      "Build a weather app",
-      "Create an e-commerce mobile app"
+      "Build a habit tracking mobile app",
+      "Create a local job board app",
+      "Develop a plant care reminder app",
+      "Build a travel buddy app with maps",
+      "Create a book club discussion app"
     ],
     careers: ["Mobile Developer", "Full-Stack Developer", "React Native Developer"],
     resources: [
@@ -271,11 +253,11 @@ export const skillsData = {
   Swift: {
     nextSkills: ["SwiftUI", "Combine", "CoreData", "Networking", "AppKit"],
     projects: [
-      "Build an iOS game",
-      "Create a productivity app",
-      "Develop a photo editing app",
-      "Build a music streaming app",
-      "Create a fitness tracker"
+      "Build a meditation and mindfulness app",
+      "Create a recipe app with offline support",
+      "Develop an audio book player",
+      "Build a personal diary app with encryption",
+      "Create a workout tracking app"
     ],
     careers: ["iOS Developer", "Mobile Developer", "Apple Developer"],
     resources: [
@@ -289,11 +271,11 @@ export const skillsData = {
   Kotlin: {
     nextSkills: ["Android Studio", "Jetpack Compose", "Retrofit", "Room Database"],
     projects: [
-      "Build an Android messaging app",
-      "Create a task management app",
-      "Develop a fitness tracking app",
-      "Build a news reader app",
-      "Create an e-commerce app"
+      "Build a Reddit-like discussion app",
+      "Create a meal planning and grocery app",
+      "Develop a time tracking productivity app",
+      "Build an offline-first todo app",
+      "Create a peer-to-peer messaging app"
     ],
     careers: ["Android Developer", "Mobile Developer", "Kotlin Developer"],
     resources: [
@@ -304,14 +286,14 @@ export const skillsData = {
     ]
   },
 
-  // 🗄️ DATABASES
+  // DATABASES
   SQL: {
     nextSkills: ["PostgreSQL", "Query Optimization", "Indexes", "Transactions", "Database Design"],
     projects: [
-      "Design a complex database schema",
-      "Build a data warehouse",
-      "Create optimized queries",
-      "Build a reporting system"
+      "Design a database for a SaaS platform",
+      "Build complex queries for business intelligence",
+      "Create a normalized database schema",
+      "Build a customer analytics database"
     ],
     careers: ["Database Engineer", "Data Analyst", "Backend Developer"],
     resources: [
@@ -325,10 +307,10 @@ export const skillsData = {
   PostgreSQL: {
     nextSkills: ["Advanced SQL", "Indexing", "Replication", "Performance Tuning", "JSON/Arrays"],
     projects: [
-      "Build a production database",
-      "Create a distributed database system",
-      "Design a high-performance database",
-      "Build real-time analytics"
+      "Build a production database for a startup",
+      "Create a real-time data replication system",
+      "Design a geo-distributed database",
+      "Build a time-series analytics database"
     ],
     careers: ["Database Administrator", "Backend Developer", "Data Engineer"],
     resources: [
@@ -342,10 +324,10 @@ export const skillsData = {
   MongoDB: {
     nextSkills: ["Aggregation", "Indexing", "Replication", "Sharding", "Atlas"],
     projects: [
-      "Build a NoSQL application",
-      "Create a real-time data app",
-      "Develop a document-based system",
-      "Build a flexible schema application"
+      "Build a content management system with flexible schema",
+      "Create a real-time multi-user collaboration app",
+      "Develop a mobile app backend with offline sync",
+      "Build a logging and monitoring system"
     ],
     careers: ["Backend Developer", "Database Engineer", "Full-Stack Developer"],
     resources: [
@@ -359,11 +341,11 @@ export const skillsData = {
   Firebase: {
     nextSkills: ["Firestore", "Cloud Functions", "Cloud Storage", "Authentication", "Realtime Database"],
     projects: [
-      "Build a chat application",
-      "Create a collaborative document editor",
-      "Develop a real-time todo app",
-      "Build a social media app",
-      "Create a live notification system"
+      "Build a real-time multiplayer game",
+      "Create a collaborative note-taking app",
+      "Develop a live event ticketing platform",
+      "Build a real-time GPS tracking app",
+      "Create a live streaming metadata system"
     ],
     careers: ["Full-Stack Developer", "Mobile Developer", "Backend Developer"],
     resources: [
@@ -377,10 +359,10 @@ export const skillsData = {
   Redis: {
     nextSkills: ["Caching Strategies", "Sessions", "Pub/Sub", "Clustering", "Performance Optimization"],
     projects: [
-      "Build a high-performance cache layer",
-      "Create a real-time leaderboard",
-      "Develop a session management system",
-      "Build a rate limiter"
+      "Build a real-time game leaderboard",
+      "Create a distributed cache layer",
+      "Develop a session store for web apps",
+      "Build a real-time notification system"
     ],
     careers: ["Backend Developer", "DevOps Engineer", "Performance Engineer"],
     resources: [
@@ -391,14 +373,14 @@ export const skillsData = {
     ]
   },
 
-  // ☁️ DEVOPS & CLOUD
+  // DEVOPS & CLOUD
   Docker: {
     nextSkills: ["Kubernetes", "Container Orchestration", "Docker Compose", "CI/CD", "Docker Registry"],
     projects: [
-      "Containerize an application",
-      "Create a multi-container setup",
-      "Build a deployment pipeline",
-      "Create a development environment"
+      "Containerize a microservices application",
+      "Create multi-environment deployments",
+      "Build a containerized development environment",
+      "Create a production deployment pipeline"
     ],
     careers: ["DevOps Engineer", "Infrastructure Engineer", "Backend Developer"],
     resources: [
@@ -412,10 +394,10 @@ export const skillsData = {
   Kubernetes: {
     nextSkills: ["Helm", "Service Mesh", "Monitoring", "Scaling", "Container Security"],
     projects: [
-      "Deploy applications to Kubernetes",
-      "Build a microservices infrastructure",
-      "Create auto-scaling pipelines",
-      "Build a service mesh"
+      "Deploy a full microservices stack to Kubernetes",
+      "Build a self-healing infrastructure",
+      "Create auto-scaling policies for applications",
+      "Build a multi-region deployment strategy"
     ],
     careers: ["DevOps Engineer", "Platform Engineer", "Infrastructure Architect"],
     resources: [
@@ -429,10 +411,10 @@ export const skillsData = {
   "AWS": {
     nextSkills: ["EC2", "S3", "Lambda", "RDS", "CloudFormation", "IAM"],
     projects: [
-      "Deploy an application on AWS",
-      "Build a serverless architecture",
-      "Create a scalable infrastructure",
-      "Build a disaster recovery system"
+      "Build a serverless web application",
+      "Create a scalable image processing pipeline",
+      "Develop a disaster recovery solution",
+      "Build a global content delivery system"
     ],
     careers: ["Cloud Architect", "DevOps Engineer", "Infrastructure Engineer"],
     resources: [
@@ -446,10 +428,10 @@ export const skillsData = {
   GCP: {
     nextSkills: ["Cloud Run", "BigQuery", "Cloud Storage", "Dataflow", "Cloud SQL"],
     projects: [
-      "Deploy on Google Cloud",
-      "Build a data pipeline",
-      "Create a real-time analytics",
-      "Build a serverless application"
+      "Build a serverless data pipeline",
+      "Create a real-time analytics dashboard",
+      "Develop an ML model deployment system",
+      "Build a data warehouse solution"
     ],
     careers: ["Cloud Architect", "Data Engineer", "DevOps Engineer"],
     resources: [
@@ -460,14 +442,14 @@ export const skillsData = {
     ]
   },
 
-  // 🔍 FRONTEND TECHNOLOGIES
+  // FRONTEND TECHNOLOGIES
   "HTML/CSS": {
     nextSkills: ["JavaScript", "Responsive Design", "CSS Frameworks", "Web Standards"],
     projects: [
-      "Build a responsive website",
-      "Create a landing page",
-      "Design a portfolio website",
-      "Build a business website"
+      "Build a responsive business website",
+      "Create an interactive landing page",
+      "Design a personal portfolio",
+      "Build an accessibility-focused website"
     ],
     careers: ["Frontend Developer", "Web Designer", "Junior Developer"],
     resources: [
@@ -481,10 +463,10 @@ export const skillsData = {
   "CSS/SCSS": {
     nextSkills: ["CSS Grid", "Flexbox", "Animations", "Preprocessors", "Tailwind"],
     projects: [
-      "Create complex layouts",
-      "Build animated components",
-      "Design a component system",
-      "Create responsive designs"
+      "Build complex layouts with CSS Grid",
+      "Create animated interactive components",
+      "Design a reusable component system",
+      "Build micro-interactions and transitions"
     ],
     careers: ["Frontend Developer", "UI Developer", "CSS Specialist"],
     resources: [
@@ -498,10 +480,10 @@ export const skillsData = {
   "Tailwind CSS": {
     nextSkills: ["Responsive Design", "Component Design", "Custom Config", "Performance"],
     projects: [
-      "Build UI with Tailwind",
-      "Create a design system",
-      "Design landing pages",
-      "Build a component library"
+      "Build a SaaS landing page",
+      "Create a full design system with Tailwind",
+      "Design a mobile-first dashboard",
+      "Build a component library for reuse"
     ],
     careers: ["Frontend Developer", "UI Developer", "Full-Stack Developer"],
     resources: [
@@ -512,14 +494,14 @@ export const skillsData = {
     ]
   },
 
-  // 🧪 TESTING & QA
+  // TESTING & QA
   "Testing": {
     nextSkills: ["Jest", "Cypress", "Unit Testing", "Integration Testing", "E2E Testing"],
     projects: [
-      "Write comprehensive tests",
-      "Build test automation",
-      "Create testing framework",
-      "Improve code coverage"
+      "Build a comprehensive test suite for an app",
+      "Create end-to-end test automation",
+      "Develop a testing framework",
+      "Build a continuous testing pipeline"
     ],
     careers: ["QA Engineer", "Test Automation Engineer", "Senior Developer"],
     resources: [
@@ -530,13 +512,13 @@ export const skillsData = {
     ]
   },
 
-  // 🛠️ TOOLS & SKILLS
+  // TOOLS & SKILLS
   Git: {
     nextSkills: ["GitHub", "GitLab", "Version Control", "Branching Strategies"],
     projects: [
-      "Manage project repositories",
-      "Create branching workflows",
-      "Build CI/CD pipelines"
+      "Set up a collaborative Git workflow",
+      "Create a branching strategy for teams",
+      "Build automated CI/CD pipelines"
     ],
     careers: ["Developer", "DevOps Engineer"],
     resources: [
@@ -550,10 +532,10 @@ export const skillsData = {
   "API Development": {
     nextSkills: ["REST", "GraphQL", "WebSockets", "Documentation"],
     projects: [
-      "Build a public API",
-      "Create API documentation",
-      "Develop a GraphQL server",
-      "Build real-time APIs"
+      "Build a comprehensive public API",
+      "Create interactive API documentation",
+      "Develop a GraphQL gateway",
+      "Build a real-time notification API"
     ],
     careers: ["API Developer", "Backend Developer", "Full-Stack Developer"],
     resources: [
@@ -567,10 +549,10 @@ export const skillsData = {
   GraphQL: {
     nextSkills: ["Apollo", "Relay", "Schema Design", "Performance Optimization"],
     projects: [
-      "Build a GraphQL server",
-      "Create a data aggregation layer",
-      "Build a real-time subscription system",
-      "Develop a backend-for-frontend"
+      "Build a federated GraphQL platform",
+      "Create a real-time subscription system",
+      "Develop a backend-for-frontend layer",
+      "Build a data aggregation gateway"
     ],
     careers: ["Backend Developer", "Full-Stack Developer", "API Architect"],
     resources: [
@@ -581,14 +563,14 @@ export const skillsData = {
     ]
   },
 
-  // 🎨 DESIGN & UI/UX
+  // DESIGN & UI/UX
   Figma: {
     nextSkills: ["UI Design", "Prototyping", "Design Systems", "Collaboration"],
     projects: [
-      "Design a complete app interface",
-      "Create a design system",
-      "Build interactive prototypes",
-      "Design a website"
+      "Design a complete mobile application",
+      "Create a comprehensive design system",
+      "Build interactive high-fidelity prototypes",
+      "Design a responsive web application"
     ],
     careers: ["UI/UX Designer", "Product Designer", "Design Lead"],
     resources: [

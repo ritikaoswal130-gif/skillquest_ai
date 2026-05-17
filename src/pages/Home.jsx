@@ -21,27 +21,11 @@ export default function Home({ onNavigateToLogin, onNavigateToRegister }) {
     >
       {/* Animated Background Orbs */}
       <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) translateX(0px); }
-          50% { transform: translateY(-20px) translateX(10px); }
-        }
         @keyframes glow-animation {
           0%, 100% { box-shadow: 0 0 30px rgba(168, 142, 130, 0.3); }
           50% { box-shadow: 0 0 60px rgba(168, 142, 130, 0.6); }
         }
-        .floating-orb {
-          position: fixed;
-          border-radius: 50%;
-          pointer-events: none;
-          opacity: 0.1;
-          animation: float 6s ease-in-out infinite;
-        }
       `}</style>
-
-      {/* Decorative floating elements */}
-      <div className="floating-orb" style={{ width: "300px", height: "300px", background: "var(--accent)", top: "-150px", left: "-150px", animationDelay: "0s" }} />
-      <div className="floating-orb" style={{ width: "200px", height: "200px", background: "var(--accent-light)", bottom: "-100px", right: "-100px", animationDelay: "2s" }} />
-      <div className="floating-orb" style={{ width: "150px", height: "150px", background: "var(--accent)", top: "50%", right: "-75px", animationDelay: "1s" }} />
 
       {/* Logo and Title */}
       <div
@@ -52,16 +36,25 @@ export default function Home({ onNavigateToLogin, onNavigateToRegister }) {
           zIndex: 1
         }}
       >
-        {/* Animated Logo */}
+        {/* Logo Icon */}
         <div
           style={{
-            fontSize: "80px",
+            width: "80px",
+            height: "80px",
             marginBottom: "30px",
-            animation: "float 4s ease-in-out infinite",
-            filter: "drop-shadow(0 10px 20px rgba(168, 142, 130, 0.2))"
+            background: "linear-gradient(135deg, var(--accent), #8b7d75)",
+            borderRadius: "20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontWeight: "800",
+            fontSize: "36px",
+            color: "white",
+            filter: "drop-shadow(0 10px 20px rgba(168, 142, 130, 0.2))",
+            letterSpacing: "1px"
           }}
         >
-          🎓
+          SQ
         </div>
 
         {/* App Name */}
@@ -94,7 +87,7 @@ export default function Home({ onNavigateToLogin, onNavigateToRegister }) {
             opacity: 0.8
           }}
         >
-          Master Skills. Accelerate Growth. 🚀
+          Master Skills. Accelerate Growth.
         </p>
 
         {/* Subtle Description */}
